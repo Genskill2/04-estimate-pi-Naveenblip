@@ -9,8 +9,8 @@ float wallis_pi(int iter)
   float term=0;
     for(int i=1;i<=iter;i++)
     {
-        term=(4*pow(i,2));
-        prod*=(term/(term-1));
+        term=(4*pow(i,2));//4n^2 term in wallis formula
+        prod*=(term/(term-1));//wallis formula
     }
     return 2*prod;
 }
@@ -32,18 +32,4 @@ int main(void) {
     }
   }
 }
-float wallis_pi(int iter)
-{
-  float prod=1;
-  float term=0;
-    for(int i=1;i<=iter;i++)
-    {
-        //general term in product of wallis formula is (4n^2)/(4n^2-1)
-        //iteration should be started with 1 since n varies from 1 to infinity
-        term=(4*pow(i,2));//4n^2 term in wallis formula
-        prod*=(term/(term-1));//wallis formula
-    }
-    //prod is pi/2
-    //pi=prod*2
-    return 2*prod;
-}
+
