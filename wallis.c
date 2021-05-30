@@ -3,8 +3,17 @@
 #include <stdio.h>
 #include <math.h>
 
-float wallis_pi(int);
-
+float wallis_pi(int iter)
+{
+  float prod=1;
+  float term=0;
+    for(int i=1;i<=iter;i++)
+    {
+        term=(4*pow(i,2));
+        prod*=(term/(term-1));
+    }
+    return 2*prod;
+}
 int main(void) {
   float pi;
   for (int i=0; i<5; i++) {
@@ -23,19 +32,18 @@ int main(void) {
     }
   }
 }
-
-float wallis_pi(int c)
+float wallis_pi(int iter)
 {
-  float totalpi=1.0;
-  float wpi=0.0;
-  for(int i=1;i<=c;i++)
-  {
-    wpi=4*i*i;
-    float bot=wpi-1;
-    float sum=wpi/bot;
-    totalpi= totalpi * sum;
-  }
-  float total=totalpi*2;
-  return total;
+  float prod=1;
+  float term=0;
+    for(int i=1;i<=iter;i++)
+    {
+        //general term in product of wallis formula is (4n^2)/(4n^2-1)
+        //iteration should be started with 1 since n varies from 1 to infinity
+        term=(4*pow(i,2));//4n^2 term in wallis formula
+        prod*=(term/(term-1));//wallis formula
+    }
+    //prod is pi/2
+    //pi=prod*2
+    return 2*prod;
 }
-
