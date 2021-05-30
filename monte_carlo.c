@@ -5,13 +5,13 @@
 
 float mc_pi(int c)
 {
-  float xc=0,yc=0;
+  float x=0,y=0;
   int hit=0;
   float dist;
   for(int i=0;i<c;i++)
   {
-    xc=frandom();
-    yc=frandom();
+    x =frandom();
+    y =frandom();
     dist=(float)sqrt((xc*xc)+(yc*yc));
     if(dist<=1)
     {
