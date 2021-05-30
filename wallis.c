@@ -27,10 +27,9 @@ int main(void) {
 float wallis_pi(int c)
 {
   float totalpi=1.0;
-  float wpi=0.0;
   for(int i=1;i<c;i++)
   {
-    wpi=4*i*i;
+    float wpi=4*i*i;
     totalpi= totalpi * (wpi)/(wpi-1);
   }
   float total=totalpi*2;
