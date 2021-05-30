@@ -33,6 +33,6 @@ float wallis_pi(int c)
     totalpi= totalpi * (wpi)/(wpi-1);
   }
   float total=totalpi*2;
-  return totalpi;
+  return total;
 }
 
