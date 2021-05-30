@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <math.h>
 
+float mc_pi(int);
 
 float frandom() {
   long int q = random();
@@ -54,6 +55,7 @@ float mc_pi(int count)
 	float area = ((4*picount)/count);
 	return area;
 }
+
 
 
 
