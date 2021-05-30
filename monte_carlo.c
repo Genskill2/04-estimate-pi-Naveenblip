@@ -19,7 +19,7 @@ float mc_pi(int c)
   {
     x =frandom();
     y =frandom();
-    dist=(float)sqrt((x*x)+(y*y));
+    dist=(float)sqrt(pow(x,2)+pow(y,2));
     if(dist<=1)
     {
       hit++;
