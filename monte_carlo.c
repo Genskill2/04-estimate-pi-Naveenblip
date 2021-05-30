@@ -39,5 +39,23 @@ int main(void) {
   }
 }
 
+float mc_pi(int c)
+{
+  float count=0;
+  for(int i=0;i<count;i++)
+  {
+    float xc = frandom();
+    float yc=frandom();
+    float dist=sqrt(xc*xc+yc*yc);
+    if (dist<1)
+    {
+      count++;
+    }
+  }
+  float area=((4*count)/c);
+  return area;
+}
+  
+
 
 
