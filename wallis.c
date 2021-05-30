@@ -3,16 +3,16 @@
 #include <stdio.h>
 #include <math.h>
 
-float wallis_pi(int iter)
+float wallis_pi(int c)
 {
-  float prod=1;
+  float pitotal=1;
   float term=0;
-    for(int i=1;i<=iter;i++)
+    for(int i=1;i<=c;i++)
     {
-        term=(4*pow(i,2));//4n^2 term in wallis formula
-        prod*=(term/(term-1));//wallis formula
+        term=(4*pow(i,2));
+        prod*=(term/(term-1));
     }
-    return 2*prod;
+    return 2*pitotal;
 }
 int main(void) {
   float pi;
