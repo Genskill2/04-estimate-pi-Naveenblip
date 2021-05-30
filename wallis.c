@@ -28,12 +28,14 @@ float wallis_pi(int c)
 {
   float totalpi=1.0;
   float wpi=0.0;
-  for(int i=1;i<c;i++)
+  for(int i=1;i<=c;i++)
   {
     wpi=4*i*i;
-    totalpi= totalpi * (wpi)/(wpi-1);
+    float bot=wpi-1;
+    float sum=wpi/bot;
+    totalpi= totalpi * sum;
   }
   float total=totalpi*2;
-  return totalpi;
+  return total;
 }
 
