@@ -10,23 +10,6 @@ float frandom() {
   return ret;
 }
 
-float mc_pi(int c)
-{
-  float x=0,y=0;
-  int hit=0;
-  float dist;
-  for(int i=0;i<c;i++)
-  {
-    x =frandom();
-    y =frandom();
-    dist=(float)sqrt(pow(x,2)+pow(y,2));
-    if(dist<=1)
-    {
-      hit++;
-    }
-    return (4.0*dist)/c;
-  }
-
 int main(void) {
   float pi0;
   float pi1;
@@ -53,6 +36,23 @@ int main(void) {
       abort();
     }
   }
+}
+
+float mc_pi(int count)
+{
+	float picount=0;
+	for(int i=0;i<count;i++)
+	{
+		
+		float x = frandom();
+		float y = frandom();
+		if(sqrt(x*x+y*y)<1)
+		{
+			picount++;
+		}
+	}
+	float area = ((4*picount)/count);
+	return area;
 }
 
 
