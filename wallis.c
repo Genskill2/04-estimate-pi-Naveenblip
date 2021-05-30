@@ -10,7 +10,7 @@ float wallis_pi(int c)
     for(int i=1;i<=c;i++)
     {
         term=(4*pow(i,2));
-        prod*=(term/(term-1));
+        pitotal*=(term/(term-1));
     }
     return 2*pitotal;
 }
